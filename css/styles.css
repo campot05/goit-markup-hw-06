@@ -377,6 +377,7 @@ button {
   border: 2px solid #212121;
   border-radius: 2px;
   margin-right: 8px;
+  cursor: pointer;
 }
 
 .policy-checkbox:checked + .policy-icon {
