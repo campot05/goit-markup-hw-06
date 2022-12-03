@@ -240,7 +240,7 @@ button {
   transition: transform 500ms ease;
 }
 
-.modal-button {
+.close-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -269,6 +269,14 @@ button {
   margin-bottom: 12px;
 }
 
+.modal-item {
+  margin-bottom: 10px;
+}
+
+.modal-item:last-child {
+  margin-bottom: 20px;
+}
+
 .modal-label {
   position: relative;
   display: block;
@@ -276,7 +284,6 @@ button {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
-  margin-bottom: 10px;
 }
 
 .modal-input {
@@ -336,33 +343,51 @@ button {
   border: 1px solid var(--accent-color);
 }
 
-.modal-policy {
+.policy {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-}
-
-.modal-policy input {
-  width: 16px;
-  height: 15px;
-  margin: 0 8px 0 0;
-}
-
-.modal-policy label {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: #757575;
+  padding-left: 12px;
 }
 
 .modal-link {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
   color: var(--accent-color);
 }
 
-.modal-form-button {
+.policy-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.policy-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+.policy-checkbox:checked + .policy-icon {
+  background-color: var(--accent-color);
+  background-image: url(../image/check.svg);
+  background-size: contain;
+  border-color: var(--accent-color);
+  background-origin: border-box;
+}
+
+.modal-button {
   display: flex;
   margin: 0 auto;
   background-color: var(--accent-color);
